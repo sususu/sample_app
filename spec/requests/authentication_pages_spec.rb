@@ -14,7 +14,7 @@ describe "AuthenticationPages" do
     before { visit signin_path }
 
     describe "with invalid information" do
-      let(:submit) { "Sign in" }
+      before { click_button "Sign in" }
 
       it { should have_title('Sign in') }
       it { should have_selector('div.alert.alert-error', text: 'Invalid') }
