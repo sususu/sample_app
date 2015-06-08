@@ -42,7 +42,10 @@ class UsersController < ApplicationController
     # Before actions
 
     def signed_in_user
-      redirect_to signin_url, notice: "please sign in." unless signed_in?
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "please sign in."
+      end
     end
 
     def correct_user
