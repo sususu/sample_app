@@ -125,7 +125,7 @@ describe "AuthenticationPages" do
         end
       end
 
-      describe 'in the Micropots controller' do
+      describe 'in the Micropost controller' do
 
         describe 'submitting to the create action' do
           before { post microposts_path }
